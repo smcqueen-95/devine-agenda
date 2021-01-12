@@ -1,5 +1,7 @@
 {
   "name": "divine-agenda",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }

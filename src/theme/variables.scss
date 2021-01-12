@@ -74,6 +74,29 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+  --ion-color-devine: #68a6bb;
+  --ion-color-devine-rgb: 104,166,187;
+  --ion-color-devine-contrast: #000000;
+  --ion-color-devine-contrast-rgb: 0,0,0;
+  --ion-color-devine-shade: #5c92a5;
+  --ion-color-devine-tint: #77afc2;
+
+  ion-tab-button.tab-selected {
+    ion-icon,
+    ion-label {
+      color: var(--ion-color-devine) !important;
+      --ion-color-base: var(--ion-color-devine) !important;
+    }
+  }
+}
+.ion-color-devine {
+  --ion-color-base: var(--ion-color-devine);
+  --ion-color-base-rgb: var(--ion-color-devine-rgb);
+  --ion-color-contrast: var(--ion-color-devine-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-devine-contrast-rgb);
+  --ion-color-shade: var(--ion-color-devine-shade);
+  --ion-color-tint: var(--ion-color-devine-tint);
 }
 
 @media (prefers-color-scheme: dark) {
