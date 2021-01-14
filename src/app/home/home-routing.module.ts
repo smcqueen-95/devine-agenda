@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeGuard } from '../guards/home.guard';
-
+import {UserDataResolver} from '../resolvers/userData.resolver';
 import { HomePage } from './home.page';
 
 const routes: Routes = [
@@ -9,6 +9,9 @@ const routes: Routes = [
     path: 'home',
     component: HomePage,
     canActivate: [HomeGuard],
+    resolve: {
+        UserDataResolver
+    },
     children: [
       {
         path: 'feed',

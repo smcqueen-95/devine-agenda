@@ -9,11 +9,20 @@ import { AuthConstants } from "../config/auth-constants";
   providedIn: "root",
 })
 export class AuthService {
+
+  userData$ = new BehaviorSubject<any>('');
   constructor(
     private httpService: HttpService,
     private storageService: StorageService,
     private router: Router
   ) {}
+
+  getUserData(){
+    this.storageService.get(AuthConstants.AUTH).then(res =>{
+      console.log(res)
+        this.userData$.next(res);
+      })
+  }
 
   login(postData: any): Observable<any> {
     return this.httpService.post("login", postData);
@@ -26,7 +35,8 @@ export class AuthService {
   logout() {
     // this.storageService.clear();
     this.storageService.removeItem(AuthConstants.AUTH).then((res) => {
-      this.router.navigate([""]);
+      this.userData$.next('');
+      this.router.navigate(['']);
     });
   }
 }
