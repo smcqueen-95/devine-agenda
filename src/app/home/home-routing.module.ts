@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { HomeGuard } from '../guards/home.guard';
 
 import { HomePage } from './home.page';
 
@@ -7,6 +8,7 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomePage,
+    canActivate: [HomeGuard],
     children: [
       {
         path: 'feed',
@@ -31,6 +33,12 @@ const routes: Routes = [
         loadChildren:() => import('../pages/settings/settings.module').then(
           m => m.SettingsPageModule
         )
+      },
+      {
+        path: '',
+        redirectTo: '/home/feed',
+        pathMatch: "full"
+        
       }
     ]
   }

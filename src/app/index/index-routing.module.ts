@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { IndexGuard } from '../guards/index.guard';
 
 import { IndexPage } from './index.page';
 
@@ -7,6 +8,7 @@ const routes: Routes = [
   {
     path: '',
     component: IndexPage,
+    canActivate: [IndexGuard],
     children: [
       {
         path: '',
