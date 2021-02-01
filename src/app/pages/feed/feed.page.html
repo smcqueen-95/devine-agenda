@@ -6,6 +6,8 @@
 
 <ion-content>
   <ion-item>
-    <h3>Welcome {{displayUserData?.name}}</h3>
+    <h3>Welcome {{authUser?.name}}</h3>
   </ion-item>
+  <app-feed-update [loginUser]="authUser"></app-feed-update>
+  <app-feed-card [loginUser]="authUser"></app-feed-card>
 </ion-content>
