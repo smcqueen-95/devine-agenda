@@ -23,16 +23,18 @@ export class FeedCardComponent implements OnInit {
     });
   }
 
-  feedDeleteAction(feedID: any, feedIndex: number) {
-    this.postData.feed_id = feedID;
+  feedDeleteAction(msgIndex: number) {
     this.postData.user_id = this.loginUser.user_id;
     this.postData.token = this.loginUser.token;
     this.alert
-      .presentAlertConfirm("Delete Feed", "Do you want to delete this feed?")
+      .presentAlertConfirm('Delete feed', 'Do you want to delete this feed?')
       .then((res: any) => {
-        console.log(res.role);
-        if (res.role === "okay") {
-          this.makeFeedDelete(this.postData, feedIndex);
+        if (res.role === 'okay') {
+          this.feedService.feedDelete(this.postData).subscribe((res: any) => {
+            if (res.success) {
+              this.feedService.deleteFeedData(msgIndex);
+            }
+          });
         }
       });
   }

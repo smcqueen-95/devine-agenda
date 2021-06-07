@@ -18,23 +18,24 @@ export class FeedService {
     return this.feedData$.getValue();
   }
 
-  deleteFeedData(feedIndex: number) {
-    let data = [];
-    let currentFeedData = this.getCurrentFeedData();
-
-    currentFeedData.splice(feedIndex, 1);
-    let newUpdatedFeed = data.concat(currentFeedData);
-    this.changeFeedData(newUpdatedFeed);
-  }
-
   updateFeedData(newFeed: any) {
     let data = [];
-    let currentFeedData = this.getCurrentFeedData();
     data.push(newFeed);
-    let newUpdatedFeed = data.concat(currentFeedData);
-    this.changeFeedData(newUpdatedFeed);
+    let currentFeedData = this.getCurrentFeedData();
+    let newFeedUpdateData = data.concat(currentFeedData);
+    this.changeFeedData(newFeedUpdateData);
   }
 
+
+  deleteFeedData(msgIndex: number) {
+    let data = [];
+    let currentFeedData = this.getCurrentFeedData();
+    currentFeedData.splice(msgIndex, 1);
+    let newFeedUpdateData = data.concat(currentFeedData);
+    this.changeFeedData(newFeedUpdateData);
+  }
+
+  
   feedData(postData: any): Observable<any> {
     return this.httpService.post("feed", postData);
   }

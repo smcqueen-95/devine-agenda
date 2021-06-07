@@ -8,13 +8,13 @@
         },
         {
             "feed_id": "850",
-            "feed": "Technolgy blog www.9lessons.info",
+            "feed": "Technolgy is everywhere",
             "user_id_fk": "1",
             "created": "1566283656"
         },
         {
             "feed_id": "840",
-            "feed": "Node mock server",
+            "feed": "NodeJS Mock Server",
             "user_id_fk": "1",
             "created": "1566137529"
         }

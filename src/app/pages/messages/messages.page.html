@@ -5,5 +5,12 @@
 </ion-header>
 
 <ion-content>
-
+  <ion-card *ngFor="let feed of feedData; let i = index">
+    <ion-card-content>
+      <!-- <button (click)="feedDeleteAction(feed.feed_id, i)" class="right">
+        <ion-icon name="trash"></ion-icon>
+      </button> -->
+      <p [innerHTML]="feed.feed"></p>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

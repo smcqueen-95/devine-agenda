@@ -33,3 +33,5 @@ npm-debug.log*
 /plugins
 /www
 /ios
+/android
+.gradle
