@@ -1,4 +1,4 @@
-# The Devine Feminine Agenda
+# The Social App
 
 This project was done before I started a project that will be avaible in the future on the app store and play store. 
 
