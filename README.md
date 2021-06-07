@@ -65,6 +65,11 @@ ng serve
 `
 
 `
-- npx cap open ios
-- npx cap open android
+ionic buld capacitor ios
+ionic build capacitor android
+`
+
+`
+npx cap open ios
+npx cap open android
 `
