@@ -58,14 +58,13 @@ To check and update packages in package.json:
 npx npm-check-updates -u
 `
 
-### Compiles and hot-reloads for development
+### Start Project
 
 `
-npm run start
+ng serve
 `
 
-### Compiles and minifies for production
-
 `
-npm run build
+- npx cap open ios
+- npx cap open android
 `
