@@ -66,12 +66,16 @@ ng serve
 
 `
 ionic buld capacitor ios
+`
 
+`
 ionic build capacitor android
 `
 
 `
 npx cap open ios
+`
 
+`
 npx cap open android
 `
