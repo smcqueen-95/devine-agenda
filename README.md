@@ -7,7 +7,6 @@ This project was done before I started a project that will be avaible in the fut
 Name: Samira Mc Queen
 [LinkedIn](https://www.linkedin.com/in/samira-mc-queen-1882431a7/)
 
-Free Spririted Caribbean Woman.
 Software Developer and aspiring Game Developer
 
 # Project 
